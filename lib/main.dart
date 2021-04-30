@@ -12,6 +12,10 @@ class ExpensesApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: MyHomePage(),
+      theme: ThemeData(
+        primarySwatch: Colors.grey,
+        accentColor: Colors.black87,
+      ),
     );
   }
 }
@@ -64,6 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Theme.of(context).primaryColor,
         title: Text('Despesas Pessoais'),
         actions: <Widget>[
           IconButton(
@@ -88,6 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Theme.of(context).accentColor,
         child: Icon(Icons.add),
         onPressed: () => _openTransactionFormModal(context),
       ),

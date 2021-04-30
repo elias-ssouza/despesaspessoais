@@ -32,33 +32,35 @@ class _TransactionFormState extends State<TransactionForm> {
       elevation: 5,
       child: Padding(
         padding: const EdgeInsets.all(10),
-        child: Column(
-          children: <Widget>[
-            TextField(
-              controller: titleController,
-              keyboardType: TextInputType.text,
-              onSubmitted: (_) => _submitForm(),
-              decoration: InputDecoration(labelText: 'Título'),
-            ),
-            TextField(
-              controller: valueController,
-              keyboardType: TextInputType.numberWithOptions(decimal: true),
-              onSubmitted: (_) => _submitForm(),
-              decoration: InputDecoration(
-                labelText: 'Valor (R\$)',
+        child: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              TextField(
+                controller: titleController,
+                keyboardType: TextInputType.text,
+                onSubmitted: (_) => _submitForm(),
+                decoration: InputDecoration(labelText: 'Título'),
               ),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: <Widget>[
-                TextButton(
-                  style: TextButton.styleFrom(primary: Colors.purple),
-                  child: Text('Nova Transação'),
-                  onPressed: _submitForm,
+              TextField(
+                controller: valueController,
+                keyboardType: TextInputType.numberWithOptions(decimal: true),
+                onSubmitted: (_) => _submitForm(),
+                decoration: InputDecoration(
+                  labelText: 'Valor (R\$)',
                 ),
-              ],
-            ),
-          ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: <Widget>[
+                  TextButton(
+                    style: TextButton.styleFrom(primary: Colors.purple),
+                    child: Text('Nova Transação'),
+                    onPressed: _submitForm,
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
