@@ -53,7 +53,7 @@ class _TransactionFormState extends State<TransactionForm> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
                   TextButton(
-                    style: TextButton.styleFrom(primary: Colors.purple),
+                    style: TextButton.styleFrom(primary: Colors.black),
                     child: Text('Nova Transação'),
                     onPressed: _submitForm,
                   ),

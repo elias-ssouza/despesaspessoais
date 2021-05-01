@@ -2,6 +2,8 @@ import 'package:expenses/models/transaction.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:intl/intl.dart';
+import 'dart:ui';
+import 'package:flutter/widgets.dart';
 
 class TransactionList extends StatelessWidget {
   final List<Transaction> transactions;
@@ -23,7 +25,7 @@ class TransactionList extends StatelessWidget {
                   Container(
                     height: 200,
                     child: Image.asset(
-                      'assets\images\waiting.png',
+                      'assets/images/waiting.png',
                       fit: BoxFit.cover,
                     ),
                   ),
