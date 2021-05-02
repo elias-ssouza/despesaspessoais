@@ -16,6 +16,23 @@ class ExpensesApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.grey,
         accentColor: Colors.black87,
+        fontFamily: 'Lato',
+        textTheme: ThemeData.light().textTheme.copyWith(
+              headline6: TextStyle(
+                fontFamily: 'PlayfairDisplay',
+                fontSize: 15,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+        appBarTheme: AppBarTheme(
+          textTheme: ThemeData.light().textTheme.copyWith(
+                headline6: TextStyle(
+                  fontFamily: 'PlayfairDisplay',
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+        ),
       ),
     );
   }
@@ -27,8 +44,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final _transactions = [
-    Transaction(
+  final List<Transaction> _transactions = [
+    /*Transaction(
       id: 't1',
       title: 'Novo Tênis',
       value: 310.76,
@@ -39,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
       title: 'Conta de Luz',
       value: 210.22,
       date: DateTime.now(),
-    )
+    )*/
   ];
 
   _addTransaction(String title, double value) {
