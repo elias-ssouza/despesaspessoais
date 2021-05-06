@@ -51,13 +51,13 @@ class _MyHomePageState extends State<MyHomePage> {
       id: 't1',
       title: 'Novo Tênis',
       value: 310.76,
-      date: DateTime.now(),
+      date: DateTime.utc(2021, 05, 05),
     ),
     Transaction(
       id: 't2',
       title: 'Conta de Luz',
       value: 210.22,
-      date: DateTime.now(),
+      date: DateTime.utc(2021, 05, 04),
     )
   ];
 
