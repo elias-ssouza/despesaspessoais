@@ -20,12 +20,15 @@ class ExpensesApp extends StatelessWidget {
         accentColor: Colors.black87,
         fontFamily: 'Lato',
         textTheme: ThemeData.light().textTheme.copyWith(
-              headline6: TextStyle(
-                fontFamily: 'PlayfairDisplay',
-                fontSize: 15,
-                fontWeight: FontWeight.bold,
-              ),
+            headline6: TextStyle(
+              fontFamily: 'PlayfairDisplay',
+              fontSize: 15,
+              fontWeight: FontWeight.bold,
             ),
+            button: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            )),
         appBarTheme: AppBarTheme(
           textTheme: ThemeData.light().textTheme.copyWith(
                 headline6: TextStyle(
